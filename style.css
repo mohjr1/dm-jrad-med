@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #00AA;
+}
+
+.grid-main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+
+  grid-template-areas:
+    "fruits transports";
+
+  grid-template-columns: 300px 100px;
+  grid-template-rows: 400px;
+  gap: 5px;
+}
+
+.grid-fruits {
+  grid-area: fruits;
+}
+
+.grid-fruits {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+
+.grid-transports {
+  grid-area: transports
+}
+
+.grid-transports {
+  display: grid;
+}
+
+.grid-main div {
+  /* display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%; */
+  cursor: pointer;
+  font-size: 3rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(0, 0, 0, .75);
+}
